@@ -1,18 +1,22 @@
+# Configure the Azure provider
 terraform {
   required_version = ">= 1.1.0"
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "~> 2.46.0"
+      version = "~> 3.0.2"
     }
   }
- cloud {
+cloud {
     organization = "rytesoft"
     workspaces {
       name = "learn-terraform-azure"
     }
   }
+ 
 }
+
+
 
 provider "azurerm" {
   features {}
